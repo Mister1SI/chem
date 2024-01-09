@@ -3,10 +3,10 @@ CSRC = ${wildcard src/*.c}
 all: run
 
 run: build
-	./chem
+	@./chem
 
 build: $(CSRC)
-	gcc $(CSRC) -o chem
+	@gcc -Wno-implicit-function-declaration $(CSRC) -o chem
 
 clean:
 	rm chem
